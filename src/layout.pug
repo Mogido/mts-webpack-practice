@@ -1,0 +1,31 @@
+include mixins/document-title
+include mixins/content-text
+include mixins/content-title
+include mixins/button
+include mixins/header
+include mixins/footer
+
+mjml
+    mj-head
+        block title
+
+        mj-style * { font-family: Arial, Helvetica, Ubuntu, sans-serif !important; }
+
+        mj-style ::marker { color: #44546A; font-size: 16px; }
+
+        mj-style .email__content-wrapper { max-width: 568px !important; }
+
+    mj-body(width='1000px' background-color="#F2F3F7")
+        mj-spacer(height="24px")
+
+        mj-wrapper(css-class="email__content-wrapper" padding="0" background-color="#FFFFFF" border-radius="8px")
+            block header
+
+            mj-section(padding="32px 48px 44px")
+                block content
+
+        mj-spacer(height="24px")
+
+        +footer()
+
+        mj-spacer(height="48px")

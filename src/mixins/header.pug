@@ -1,0 +1,14 @@
+mixin header(imageSrc)
+    mj-section(padding="24px 48px")
+        mj-group
+            mj-column(width="20%")
+                // Путь к логотипу указан относительно
+                // места исполнения миксина, а не самого миксина.
+                mj-image(src=`cid:${require('../mts-logo.png')}` alt="МТС" padding="0 24px 0 0" width="67px" height="17px")
+
+            mj-column(width="80%")
+                mj-text(padding="0" color="#001424" font-size="14px" font-weight="700" line-height="16px") Кадровый электронный документооборот
+
+    mj-section(padding="0")
+        mj-column
+            mj-image(src=`cid:${imageSrc}` alt="Изображение" padding="0" width="568px" height="220px" container-background-color="#E2E5EB")

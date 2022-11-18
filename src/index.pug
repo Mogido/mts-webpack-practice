@@ -1,0 +1,19 @@
+extends layout
+
+block title
+    +document-title('Приглашение в команду')
+
+block header
+    +header(require('./invite-to-offer.png'))
+
+block content
+    mj-column
+        +content-title('Приглашение в команду')
+
+        +content-text('Добрый день, Кандидат!')
+
+        +content-text('Компания MTS рада сделать вам предложение о работе на должности «Middle Frontend разработчик».', '8px')
+
+        +content-text('Мы подготовили для вас оффер – ознакомьтесь с ним.', '32px')
+
+        +button('Перейти к анкете', 'https://mts.ru')
